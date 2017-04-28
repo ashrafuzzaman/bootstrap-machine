@@ -6,7 +6,7 @@
 - name: Accept Java License
   become: yes
   debconf:
-    name: 'oracle-java{{jdk_version}}-installer'
+    name: 'oracle-java{{version}}-installer'
     question: 'shared/accepted-oracle-license-v1-1'
     value: 'true'
     vtype: 'select'
@@ -15,6 +15,6 @@
   become: yes
   apt: name={{item}} state=latest
   with_items:
-    - 'oracle-java{{jdk_version}}-installer'
+    - 'oracle-java{{version}}-installer'
     - ca-certificates
-    - 'oracle-java{{jdk_version}}-set-default'
+    - 'oracle-java{{version}}-set-default'

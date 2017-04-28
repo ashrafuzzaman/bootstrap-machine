@@ -11,7 +11,7 @@
     - git
     - vscode
     - chrome
-    - { role: jdk, jdk_version: 9 }
+    - { role: jdk, version: 9 }
     - docker
     - npm
     - { role: mysql, version: 5.6 }
