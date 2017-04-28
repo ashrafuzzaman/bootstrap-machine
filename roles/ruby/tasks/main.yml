@@ -1,0 +1,15 @@
+---
+- stat:
+    path: ~/.rvm/scripts/rvm
+  register: rvm
+ 
+- name: Install rvm 
+  shell: \curl -sSL https://get.rvm.io | bash
+  when: rvm|failed
+
+- name: Source rvm
+  sudo: no
+  shell: source ~/.rvm/scripts/rvm executable=/bin/bash
+
+- name: Install ruby 
+  shell: 'rvm install {{version}}'
