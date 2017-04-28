@@ -11,5 +11,10 @@
   sudo: no
   shell: source ~/.rvm/scripts/rvm executable=/bin/bash
 
+- name: Check ruby version
+  shell: 'rvm list | grep {{version}}'
+  register: ruby_installed
+
 - name: Install ruby 
   shell: 'rvm install {{version}}'
+  when: ruby_installed|failed
