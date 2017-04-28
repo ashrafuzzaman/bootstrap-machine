@@ -1,0 +1,16 @@
+---
+- stat:
+    path: /usr/bin/npm
+  register: npm
+- debug:
+    var: npm.stat.exists
+
+- name: Add npm package in apt list 
+  shell: curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+  when: npm|failed
+
+- apt:
+    name: nodejs
+    state: installed
+    update_cache: yes
+  when: npm|failed

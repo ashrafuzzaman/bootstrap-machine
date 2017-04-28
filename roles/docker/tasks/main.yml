@@ -5,3 +5,6 @@
   with_items:
     - docker
     - docker-compose
+
+- name: Add docker to run at startup
+  shell: update-rc.d docker defaults

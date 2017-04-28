@@ -1,0 +1,10 @@
+---
+- name: Pull mysql docker image 
+  shell: 'docker pull mysql:{{version}}'
+
+- apt:
+    name: '{{item}}'
+    state: installed
+  with_items:
+    - libmysqlclient-dev
+    - mysql-client
