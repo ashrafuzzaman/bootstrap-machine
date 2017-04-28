@@ -4,12 +4,9 @@
   connection: local
   gather_facts: False
 
-  vars:
-    update_code: "false"
-
   pre_tasks:
-    - set_fact:
-        cmc_host: localhost
+    - include_vars: vars.yml
+
   roles:
     - git
     - vscode
