@@ -13,7 +13,7 @@
     - chrome
     - { role: jdk, version: 9 }
     - docker
-    - npm
+    - node
     - { role: mysql, version: 5.6 }
     - { role: mongodb, version: 3.0.8 }
     - { role: ruby, version: 2.4 }
