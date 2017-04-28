@@ -11,3 +11,4 @@
     - git
     - vscode
     - chrome
+    - { role: jdk, jdk_version: 9 }

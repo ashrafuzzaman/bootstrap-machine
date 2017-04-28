@@ -6,7 +6,6 @@
 - apt_repository:
     repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
     state: present
-    filename: vscode.list
 
 - apt:
     name: '{{item}}'

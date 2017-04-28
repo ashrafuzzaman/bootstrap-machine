@@ -1,0 +1,20 @@
+---
+- apt_repository:
+    repo: ppa:webupd8team/java
+    state: present
+
+- name: Accept Java License
+  become: yes
+  debconf:
+    name: 'oracle-java{{jdk_version}}-installer'
+    question: 'shared/accepted-oracle-license-v1-1'
+    value: 'true'
+    vtype: 'select'
+
+- name: Install Oracle Java
+  become: yes
+  apt: name={{item}} state=latest
+  with_items:
+    - 'oracle-java{{jdk_version}}-installer'
+    - ca-certificates
+    - 'oracle-java{{jdk_version}}-set-default'
