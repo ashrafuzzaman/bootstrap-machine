@@ -1,0 +1,14 @@
+---
+- apt_key:
+    url: https://dl.google.com/linux/linux_signing_key.pub
+    keyring: /etc/apt/trusted.gpg.d/google-chrome-stable.gpg
+    state: present
+- apt_repository:
+    repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+    state: present
+    filename: google-chrome-stable.list
+
+- apt:
+    name: google-chrome-stable
+    state: installed
+    update_cache: yes

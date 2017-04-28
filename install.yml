@@ -1,0 +1,16 @@
+---
+- name: NewsCred dev docker setup
+  hosts: localhost
+  connection: local
+  gather_facts: False
+
+  vars:
+    update_code: "false"
+
+  pre_tasks:
+    - set_fact:
+        cmc_host: localhost
+  roles:
+    - git
+    - vscode
+    - chrome

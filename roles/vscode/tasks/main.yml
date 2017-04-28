@@ -1,0 +1,17 @@
+---
+- apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    keyring: /etc/apt/trusted.gpg.d/microsoft.gpg
+    state: present
+- apt_repository:
+    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+    state: present
+    filename: vscode.list
+
+- apt:
+    name: '{{item}}'
+    state: installed
+    update_cache: yes
+  with_items:
+    - libgconf-2-4
+    - code
