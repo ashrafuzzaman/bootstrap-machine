@@ -14,5 +14,4 @@ if [ -f /etc/lsb-release ]; then
   sudo apt-get install --assume-yes git-core ansible
 fi
 
-sudo ansible-playbook -vvvv install.yml
-
+sudo ansible-playbook install.yml
