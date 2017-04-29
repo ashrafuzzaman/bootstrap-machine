@@ -1,4 +1,8 @@
 ---
+- apt:
+    name: mongodb-clients
+    state: installed
+
 - name: Pull mongodb docker image 
   shell: 'docker pull mongo:{{version}}'
 
