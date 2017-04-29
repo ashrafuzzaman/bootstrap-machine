@@ -1,3 +1,17 @@
 ---
 - name: Pull mongodb docker image 
   shell: 'docker pull mongo:{{version}}'
+
+- file:
+    path: /data/mongodb/
+    state: directory
+    mode: "u+rw,g+rw,o+rw"
+
+- file:
+    path: /etc/systemd/system/docker-container@mongodb.service.d/
+    state: directory
+    mode: "u+rw,g+r,o+r"
+
+- template:
+    src: docker-container@mongodb
+    dest: /etc/systemd/system/docker-container@mongodb.service.d/override.conf

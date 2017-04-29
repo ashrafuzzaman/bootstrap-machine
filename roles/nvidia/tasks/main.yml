@@ -1,0 +1,9 @@
+---
+- apt_repository:
+    repo: ppa:graphics-drivers/ppa
+    state: present
+
+- apt:
+    name: nvidia-375
+    state: installed
+    update_cache: yes
