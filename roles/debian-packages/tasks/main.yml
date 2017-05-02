@@ -5,3 +5,41 @@
   with_items:
     - synaptic
     - menulibre
+    - python-dev
+    - curl
+    - build-essential
+    - libncursesw5-dev
+    - libssl-dev
+    - libsqlite3-dev
+    - libgdbm-dev
+    - libdb++-dev
+    - libc6-dev
+    - libbz2-dev
+    - tk-dev
+    - libffi-dev
+    - libxml2-dev
+    - libxslt1-dev
+    - make
+    - gcc-multilib
+    - g++-multilib
+    - libffi6
+    - libffi6-dbg
+    - python-crypto
+    - python-mox3
+    - python-pil
+    - python-ply
+    - zlib1g-dev
+    - libbluetooth-dev
+    - dpkg-dev
+    - quilt
+    - autotools-dev
+    - libreadline-dev
+    - libtinfo-dev
+    - blt-dev
+    - libexpat1-dev
+    - libbluetooth-dev
+    - libgpm2
+    - mime-support
+    - netbase
+    - net-tools
+    - bzip2
