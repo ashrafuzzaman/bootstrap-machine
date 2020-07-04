@@ -1,0 +1,5 @@
+---
+- name: copy .newscred.yaml to home directory
+template:
+    src: files/newscred.yaml
+    dest: {{home}}/.newscred.yaml

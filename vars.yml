@@ -6,3 +6,5 @@ oracle_jdk_version: 8
 openvpn:
     user_name: ashrafuzzaman
     password: "****"
+workspace: /home/jitu/projects
+home: /home/jitu
