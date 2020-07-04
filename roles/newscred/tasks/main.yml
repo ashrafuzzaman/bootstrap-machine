@@ -1,5 +1,10 @@
 ---
 - name: copy .newscred.yaml to home directory
-template:
+  template:
     src: files/newscred.yaml
     dest: {{home}}/.newscred.yaml
+
+- git:
+    repo: 'git@github.com:newscred/localdev.git'
+    dest: {{workspace}}
+    version: master
