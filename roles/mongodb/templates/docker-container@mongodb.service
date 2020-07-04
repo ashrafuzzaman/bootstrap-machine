@@ -1,4 +1,0 @@
-[Service]
-ExecStart=
-ExecStart=/usr/bin/docker run --name mongodb -v /data/mongodb/:/data/db mongo:{{version}}
-ExecStopPost=/usr/bin/docker rm -f mongodb

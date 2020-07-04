@@ -11,9 +11,10 @@
     - git
     - vscode
     - chrome
-    - { role: jdk, version: 9 }
+    - { role: jdk, version: 14 }
     - docker
-    - node
-    - { role: mysql, version: 5.6 }
-    - { role: mongodb, version: 3.0.8 }
+    - role: ansible-role-nvm
+      nodejs_version: "12.13.0"
+      nvm_commands:
+       - "nvm exec default npm install"
     - debian-packages

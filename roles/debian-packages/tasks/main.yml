@@ -6,6 +6,7 @@
     - synaptic
     - menulibre
     - python-dev
+    - python3-dev
     - curl
     - build-essential
     - libncursesw5-dev

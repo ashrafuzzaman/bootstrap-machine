@@ -3,3 +3,6 @@ git_config:
     name: A.K.M. Ashrafuzzaman
     email: ashrafuzzaman.g2@gmail.com
 oracle_jdk_version: 8
+openvpn:
+    user_name: ashrafuzzaman
+    password: "****"

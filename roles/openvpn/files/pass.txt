@@ -1,0 +1,2 @@
+{{openvpn.user_name}}
+{{openvpn.password}}

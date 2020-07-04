@@ -1,0 +1,21 @@
+---
+- apt:
+    name: '{{item}}'
+    state: installed
+  with_items:
+    - openvpn
+
+- name: copy openvpn conf
+  copy:
+    src: files/client.conf
+    dest: /etc/openvpn/client.conf
+  become: true
+
+- name: copy openvpn password
+  template:
+    src: files/pass.txt
+    dest: /etc/openvpn/pass.txt
+  become: true
+
+- name: Add openvpn to run at startup
+  shell: systemctl enable openvpn@client.service

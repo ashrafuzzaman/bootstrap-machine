@@ -1,0 +1,14 @@
+---
+- apt:
+    name: '{{item}}'
+    state: installed
+    with_items:
+    - snapd
+
+- name: Install snap-store using snap
+  shell: snap install snap-store
+  become: yes
+
+- name: Install slack using snap
+  shell: snap install slack
+  become: yes

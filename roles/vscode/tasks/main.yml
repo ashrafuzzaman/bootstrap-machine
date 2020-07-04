@@ -12,5 +12,4 @@
     state: installed
     update_cache: yes
   with_items:
-    - libgconf-2-4
     - code
