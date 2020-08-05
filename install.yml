@@ -13,6 +13,7 @@
     - chrome
     - { role: jdk, version: 14 }
     - docker
+    - openvpn
     - role: ansible-role-nvm
       nodejs_version: "12.13.0"
       nvm_commands:

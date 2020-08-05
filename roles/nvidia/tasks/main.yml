@@ -5,5 +5,5 @@
 
 - apt:
     name: nvidia-375
-    state: installed
+    state: present
     update_cache: yes

@@ -9,6 +9,6 @@
 
 - apt:
     name: nodejs
-    state: installed
+    state: present
     update_cache: yes
   when: npm|failed
