@@ -8,3 +8,8 @@
     repo: 'git@github.com:newscred/localdev.git'
     dest: "{{workspace}}"
     version: master
+
+- name: Generate pip.conf
+  template:
+    src: files/pip.conf
+    dest: /etc/pip.conf

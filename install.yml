@@ -18,4 +18,5 @@
       nodejs_version: "12.13.0"
       nvm_commands:
        - "nvm exec default npm install"
+    - newscred
     - debian-packages
